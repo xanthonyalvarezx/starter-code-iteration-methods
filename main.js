@@ -5,3 +5,5 @@
 // "users" array has already been loaded and is ready to go.
 console.log(users)
 
+// Append the katas to this element:
+const main = document.querySelector('main')
