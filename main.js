@@ -51,7 +51,7 @@ summary4.append(kata4)
 details4.append(summary4)
 main.append(details4)
 //
-const age = users.find(user => user.age === 38)
+const age = users.find(user => user.age > 38)
 details4.append(JSON.stringify(age))
 //
 kata5 = document.createElement('h1')
@@ -62,7 +62,7 @@ summary5.append(kata5)
 details5.append(summary5)
 main.append(details5)
 //
-const isActiveAge = users.filter(user => user.age === 38).find(user => user.isActive)
+const isActiveAge = users.filter(user => user.age > 38).find(user => user.isActive)
 details5.append(JSON.stringify(isActiveAge))
 //
 kata6 = document.createElement('h1')
@@ -87,5 +87,8 @@ summary7.append(kata7)
 details7.append(summary7)
 main.append(details7)
 //
-const userTag = users.filter(user => user.age).includes(user => user.tag === 'fugiat' )
-details7.append(userTag)
+let userAge = []
+const userTag = users.filter( user => user.tags.includes('fugiat')).map(user => user.age)
+userAge.push(userTag)
+details7.append(userAge)
+console.log({userAge})
